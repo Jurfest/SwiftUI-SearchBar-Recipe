@@ -33,7 +33,7 @@ A small iOS application that shows how to use search bars within SwiftUI.
 ### Preview
 
 <h1 align="center">
-    <img alt="Preview One" src="./Checklist/Assets.xcassets/preview.imageset/preview.png" width="350px"/>
+    <img alt="Preview One" src="./SearchingSwiftUI/Assets.xcassets/preview.imageset/preview.png" width="350px"/>
 </h1>
 
 ### Acknowledgment
