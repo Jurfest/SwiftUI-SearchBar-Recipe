@@ -15,50 +15,53 @@ struct ContentView: View {
     let names = ["Azam","Jake","Alex","Mary","Jack","Jerry"]
     
     var body: some View {
-        ScrollView {
-            ZStack{
-                Card {
-                    VStack {
-                        
-                        HStack {
-                            Text("Lista")
-                                .font(.title)
-                                .fontWeight(.bold)
+        NavigationView {
+            ScrollView {
+                ZStack{
+                    Card {
+                        VStack {
                             
-                            Spacer()
-                        }
-                        
-                        // SearchBar is UIViewRepresentable
-                        Card {
-                            SearchBar(text: $searchTerm)
-                        }.cornerRadius(20)
-                            .colorScheme(.dark)
-                            .padding(.bottom)
-                        
-                        
-                        ForEach(self.names.filter {
-                            self.searchTerm.isEmpty ? true :
-                                $0.localizedCaseInsensitiveContains(self.searchTerm)
-                        },id: \.self) { name in
-                            Card {
-                                Text(name)
+                            HStack {
+                                Text("Lista")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                
+                                Spacer()
                             }
-                            .padding()
-                            .colorScheme(.dark)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
-                        }
-                        
-                        
-                    }.padding()
-                }.background(Color.white)
-                    .cornerRadius(20)
-                    .padding(EdgeInsets(top: 32, leading: 16, bottom: 32, trailing: 16))
-                
-            }
-        }.background(Color.black)
-
+                            
+                            // SearchBar is UIViewRepresentable
+                            Card {
+                                SearchBar(text: $searchTerm)
+                            }.cornerRadius(20)
+                                .colorScheme(.dark)
+                                .padding(.bottom)
+                            
+                            
+                                ForEach(self.names.filter {
+                                    self.searchTerm.isEmpty ? true :
+                                        $0.localizedCaseInsensitiveContains(self.searchTerm)
+                                },id: \.self) { name in
+                                    Card {
+                                        Text(name)
+                                    }
+                                    .padding()
+                                    .colorScheme(.dark)
+                                    .background(Color.black)
+                                    .cornerRadius(10)
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                                }
+                            
+                            
+                            
+                        }.padding()
+                    }.background(Color.white)
+                        .cornerRadius(20)
+                        .padding(EdgeInsets(top: 32, leading: 16, bottom: 32, trailing: 16))
+                    
+                }
+            }.background(Color.black)
+                .navigationBarTitle("Lista", displayMode: .inline)
+        }
         
     }
 }
