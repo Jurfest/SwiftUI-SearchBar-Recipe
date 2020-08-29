@@ -38,7 +38,7 @@ A small iOS application that shows how to use search bars within SwiftUI.
 
 ### Acknowledgment
 
-This project is my result after completing a section of the course [SwiftUI - Declarative Interfacer for any Apple Device](https://www.udemy.com/course/swiftui-declarative-interfaces-for-any-apple-device/).
+This project is my result after completing a section of the course [SwiftUI - Declarative Interfaces for any Apple Device](https://www.udemy.com/course/swiftui-declarative-interfaces-for-any-apple-device/).
 
 ### :page_facing_up: License
 
